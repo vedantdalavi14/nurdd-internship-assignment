@@ -1,50 +1,98 @@
-# Welcome to your Expo app 👋
+# BrandPeek: Brand Discovery App (Nurdd Internship Assignment)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+BrandPeek is a sleek and modern React Native application built with Expo as part of the internship assignment for Nurdd. The app provides a clean and intuitive brand discovery experience, allowing users to browse top brands and view their detailed information. The design is heavily inspired by the minimalist and professional aesthetic of nurdd.club, featuring a vibrant, dark-themed UI and a dynamic radial gradient background.
 
-## Get started
+🎥 **Project Demo**
 
-1. Install dependencies
+(It is highly recommended to add a GIF or a short video of the app in action here. You can use a tool like Giphy Capture or ScreenToGif.)
 
-   ```bash
-   npm install
-   ```
+🚀 **Features**
 
-2. Start the app
+- **Modern UI/UX**: A clean, dark-themed interface with a vibrant blue radial gradient, inspired by nurdd.club.
+- **Dynamic Data**: Fetches a list of top brands from a live backend API with asynchronous data handling.
+- **Brand Details**: Users can tap on any brand to navigate to a detailed view with more information.
+- **Professional Structure**: Built with a modular and scalable folder structure for easy maintenance and future development.
+- **Safe Area Handling**: The UI is designed to be fully responsive and avoids overlapping with device notches and status bars using react-native-safe-area-context.
+- **Custom Components**: Features custom-built SVG icons and a reusable header component.
 
-   ```bash
-   npx expo start
-   ```
+🛠 **Tech Stack**
 
-In the output, you'll find options to open the app in a
+- **Framework**: React Native with Expo SDK
+- **Navigation**: React Navigation (Stack Navigator)
+- **Styling**: StyleSheet, expo-linear-gradient, react-native-svg for the custom radial gradient.
+- **Backend**: MockAPI.io for the RESTful API.
+- **Linting**: ESLint for code quality.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+📁 **Project Structure**
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+The project follows a modular and organized folder structure to separate concerns and improve scalability.
 
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```
+BrandPeek/
+├── assets/
+├── components/
+│   ├── BrandListItem.js
+│   ├── Header.js
+│   └── RadialGradientBackground.js
+├── constants/
+│   └── colors.js
+├── navigation/
+│   └── AppNavigator.js
+├── screens/
+│   ├── HomeScreen.js
+│   └── BrandDetailScreen.js
+├── services/
+│   └── api.js
+├── App.js
+└── README.md
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+- **/components**: Contains reusable UI components used across different screens.
+- **/constants**: Stores static values like the app's color palette.
+- **/navigation**: Manages the app's navigation logic and stack.
+- **/screens**: Holds the main screen components of the application.
+- **/services**: Centralizes all API communication and data fetching logic.
 
-## Learn more
+⚙️ **Setup and Installation**
 
-To learn more about developing your project with Expo, look at the following resources:
+To run this project locally, please follow these steps:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+1.  **Clone the repository**:
 
-## Join the community
+    ```bash
+    git clone https://github.com/vedantdalavi14/nurdd-internship-assignment.git
+    cd nurdd-internship-assignment
+    ```
 
-Join our community of developers creating universal apps.
+2.  **Install dependencies**:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+    ```bash
+    npm install
+    ```
+
+3.  **Run the application**:
+
+    ```bash
+    npx expo start
+    ```
+
+    This will open the Metro Bundler. You can then scan the QR code with the Expo Go app on your Android or iOS device.
+
+📦 **How to Build an APK**
+
+To create a standalone APK file for Android, run the following command:
+
+```bash
+npx eas build -p android --profile preview
+```
+
+This will start the build process on Expo's servers and provide you with a link to download the APK once it's complete.
+
+🌐 **Backend API**
+
+The application is powered by a mock backend created using MockAPI.io. This service was used to simulate a real-world RESTful API for fetching brand data.
+
+-   **API Endpoint**: `https://68a0993f6e38a02c58179d3a.mockapi.io`
+-   **Resources**:
+    -   `GET /brands` - Fetches a list of all brands.
+    -   `GET /brands/:id` - Fetches details for a specific brand by its ID.
