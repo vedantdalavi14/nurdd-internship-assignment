@@ -4,7 +4,11 @@ BrandPeek is a sleek and modern React Native application built with Expo as part
 
 🎥 **Project Demo**
 
-(It is highly recommended to add a GIF or a short video of the app in action here. You can use a tool like Giphy Capture or ScreenToGif.)
+
+https://github.com/user-attachments/assets/8908233b-9342-4b6f-a3fc-d1925b03cbd0
+
+
+
 
 🚀 **Features**
 
