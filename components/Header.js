@@ -26,7 +26,7 @@ const Header = () => {
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    justifyContent: 'flex-end', // Aligns the menu icon to the right
+    justifyContent: 'flex-end',
     alignItems: 'center',
     paddingHorizontal: 16,
     paddingBottom: 12,

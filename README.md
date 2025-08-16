@@ -80,13 +80,29 @@ To run this project locally, please follow these steps:
 
 📦 **How to Build an APK**
 
-To create a standalone APK file for Android, run the following command:
+To build a standalone Android APK, follow these steps:
 
-```bash
-npx eas build -p android --profile preview
-```
+1.  **Install EAS CLI** (if you haven't already):
+    ```bash
+    npm install -g eas-cli
+    ```
 
-This will start the build process on Expo's servers and provide you with a link to download the APK once it's complete.
+2.  **Log in** to your Expo account:
+    ```bash
+    eas login
+    ```
+
+3.  **Configure the build** in your project directory:
+    ```bash
+    eas build:configure
+    ```
+
+4.  **Start the build**:
+    ```bash
+    npx eas build -p android --profile preview
+    ```
+
+Once the build is complete, you will get a link to download and install the APK on your Android device.
 
 🌐 **Backend API**
 

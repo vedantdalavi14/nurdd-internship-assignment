@@ -10,7 +10,7 @@ const AppNavigator = () => {
   return (
     <Stack.Navigator
       screenOptions={{
-        headerShown: false, // Hiding header as per the clean aesthetic
+        headerShown: false,
       }}
     >
       <Stack.Screen name="Home" component={HomeScreen} />

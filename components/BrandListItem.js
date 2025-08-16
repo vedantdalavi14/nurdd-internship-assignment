@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     height: 50,
     borderRadius: 25,
     marginRight: 16,
-    backgroundColor: '#FFFFFF', // White background for the logo
+    backgroundColor: '#FFFFFF',
   },
   textContainer: {
     flex: 1,
